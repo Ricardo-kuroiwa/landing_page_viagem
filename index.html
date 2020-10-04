@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Viangem dos sonhos</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <section>
+        <header>
+            <a href="#" class="logo">Viagem</a>
+            <div class="toogle" onclick="toogleMenu()">
+                
+            </div>
+        </header>
+        <div class="content">
+            <h2>Viagem<br>dos Sonhos</h2>
+        </div>
+        <div class="play" onclick="videoToggle()">
+            <img src="./images/play.png" alt="play"><span>Play Video</span>
+        </div>
+        <ul class="sci">
+            <li><a href="#"><img src="./images/instagram.png" alt="instagram"></a></li>
+            <li><a href="#"><img src="./images/twitter.png" alt="twitter"></a></li>
+            <li><a href="#"><img src="./images/facebook.png" alt="facebook"></a></li>
+        </ul>
+        <div class="navegation">
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Sobre</a></li>
+                <li><a href="#">Booking</a></li>
+                <li><a href="#">Tour</a></li>
+                <li><a href="#">Blog</a></li>
+                <li><a href="#">Contato</a></li>
+            </ul>
+        </div>
+    </section>
+    <div class="trailer">
+        <video src="./images/clip.mp4" controls="true"></video>
+        <img src="./images/close.png" alt="fechar" class='fechar' onclick="videoToggle()">
+    </div>
+<script type="text/javascript">
+    function toogleMenu(){
+        const toogle = document.querySelector('.toogle');
+        const navegation = document.querySelector('.navegation');
+        toogle.classList.toggle('active');
+        navegation.classList.toggle('active');
+    }
+    function videoToggle(){
+        const trailer = document.querySelector('.trailer');
+        const video = document.querySelector('video');
+        trailer.classList.toggle('active');
+        video.currentTime =0;
+        video.pause();
+    }
+</script>
+</body>
+</html>
